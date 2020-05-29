@@ -1,0 +1,31 @@
+{
+  "axioms": {
+    "linguist": "language",
+    "licensee": "license",
+    "packagers": "packager"
+  },
+  "rules": {
+    "all": {
+      "license-file-exists:file-existence": [
+        "error",
+        { "files": ["LICENSE*"], "nocase": true }
+      ],
+      "readme-file-exists:file-existence": [
+        "error",
+        { "files": ["README*"], "nocase": true }
+      ],
+      "contributing-file-exists:file-existence": [
+        "error",
+        { "files": [".github/CONTRIBUTING*"] }
+      ],
+      "code-of-conduct-file-exists:file-existence": [
+        "error",
+        { "files": [".github/CODE_OF_CONDUCT*"] }
+      ],
+      "changelog-file-exists:file-existence": [
+        "error",
+        { "files": ["CHANGELOG*"], "nocase": true }
+      ]
+    }
+  }
+}
