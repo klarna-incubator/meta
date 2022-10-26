@@ -1,0 +1,18 @@
+name: Klarna repolint
+
+on:
+  workflow_call:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out the repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v3
+
+      - name: Use custom rules
+        run: wget https://raw.githubusercontent.com/klarna-incubator/meta/master/repolint.json
+
+      - name: Run repolint
+        run: npx repolinter@0.11.2 $GITHUB_WORKSPACE
