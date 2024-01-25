@@ -9,7 +9,7 @@ jobs:
 
     steps:
       # Checks-out the repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Use custom rules
         run: wget https://raw.githubusercontent.com/klarna-incubator/meta/master/repolint.json
